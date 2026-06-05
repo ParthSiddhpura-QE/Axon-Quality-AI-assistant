@@ -1,0 +1,51 @@
+{
+  "timeZone": "UTC",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/gmail.addons.execute",
+    "https://www.googleapis.com/auth/calendar.addons.execute",
+    "https://www.googleapis.com/auth/docs.addons.execute",
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.addons.execute"
+  ],
+  "addOns": {
+    "common": {
+      "name": "Quality Engineering Assistant",
+      "logoUrl": "https://raw.githubusercontent.com/RBraga01/Quality-Engineering-Skills/master/platforms/gemini/logo.png",
+      "layoutProperties": {
+        "primaryColor": "#0ea5e9",
+        "secondaryColor": "#10b981"
+      },
+      "homepageTrigger": {
+        "runFunction": "onHomepage"
+      },
+      "universalActions": [
+        {
+          "label": "Home",
+          "runFunction": "onHomepage"
+        }
+      ]
+    },
+    "docs": {
+      "homepageTrigger": {
+        "runFunction": "onDocsHomepage"
+      }
+    },
+    "sheets": {
+      "homepageTrigger": {
+        "runFunction": "onSheetsHomepage"
+      }
+    },
+    "gmail": {
+      "contextualTriggers": [
+        {
+          "unconditional": {},
+          "onTriggerFunction": "onGmailOpen"
+        }
+      ]
+    }
+  }
+}

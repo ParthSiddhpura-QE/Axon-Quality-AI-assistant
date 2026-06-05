@@ -1,0 +1,7 @@
+name = "quality-engineering-assistant"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+# Set secrets via: wrangler secret put SLACK_SIGNING_SECRET
+# Set secrets via: wrangler secret put ANTHROPIC_API_KEY
