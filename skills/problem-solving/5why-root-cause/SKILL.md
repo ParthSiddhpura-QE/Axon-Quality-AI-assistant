@@ -8,7 +8,7 @@ description: >-
 license: MIT
 metadata:
   author: RBraga01
-  version: "1.0"
+  version: "1.1"
   iso-9001: "10.2"
   iatf-16949: "10.2.3"
   domain: quality-engineering
@@ -18,15 +18,46 @@ metadata:
 
 # 5-Why Root Cause Analysis
 
+## Goal
+
+Identify and validate a systemic root cause through a structured, evidence-based Why chain that can be directly linked to a corrective action.
+
+## Required Execution Checklist
+
+- [ ] Problem defined with measurable data (value vs. specification)
+- [ ] Linear Why chain built — one cause path at a time, no branching
+- [ ] Each Why supported by objective evidence (not opinion or "probably")
+- [ ] Logical consistency verified — reversal check passed
+- [ ] Systemic root cause identified (not "human error" or symptom)
+- [ ] Root cause validated: reproducibility test + elimination test
+- [ ] Output enables definition of corrective action (PCA or CAPA)
+
+---
+
 ## When to use
 
 Use 5-Why for any quality problem with a single, linear cause chain. Works best for process failures, equipment failures, and procedural non-compliances. For complex problems with multiple contributing causes, use [Fishbone](../fishbone-analysis/) first to identify candidate root causes, then use 5-Why to drill into each.
+
+If multiple potential cause paths exist — do not combine them into one chain. **Run separate 5-Why chains for each path** and determine which is confirmed by evidence.
 
 ## Prerequisites
 
 - Problem is clearly defined (use [Is/Is-Not](../is-is-not-scoping/) to scope if needed)
 - The investigation team has access to the process, machine, or system where the defect occurred
 - Physical evidence or production records are available
+
+## Use within 8D — Occurrence and Escape
+
+When used for 8D D4, two separate Why chains are required:
+
+| Chain | Starting question | What it finds |
+|-------|------------------|---------------|
+| **Occurrence chain** | "Why did the defect happen?" | Root Cause of Occurrence (RCO) — the process or design failure that created the defect |
+| **Escape chain** | "Why was the defect not detected before reaching the customer?" | Root Cause of Escape (RCE) — the detection system failure |
+
+**Run each chain independently.** Do not mix occurrence and escape causes in the same chain — they have different corrective actions. The occurrence chain addresses prevention; the escape chain addresses detection.
+
+---
 
 ## Workflow
 
@@ -76,6 +107,8 @@ The root cause is correct if:
 - **Reproducibility test:** can you deliberately create the defect by triggering the root cause? Yes → validated
 - **Elimination test:** if you fix the root cause, does the defect disappear? (trial run or logical test)
 
+**If neither test is possible, the root cause is not confirmed — it is a hypothesis.** Do not close the investigation on a hypothesis. Either obtain evidence to confirm it, or investigate alternative cause paths.
+
 ---
 
 ## Example
@@ -116,7 +149,7 @@ The root cause is correct if:
 **Branching the chain prematurely**
 → Each Why step should have one answer. If you have two, run two separate 5-Why chains.
 
-## Output format
+## Output content
 
 A validated 5-Why must include:
 1. Problem statement (measured, quantified)
@@ -124,6 +157,7 @@ A validated 5-Why must include:
 3. Root cause statement
 4. Reversal check (one sentence confirming logical flow)
 5. Validation method (how the root cause was confirmed)
+6. **Corrective action direction** — what type of action addresses this root cause (used as direct input to 8D D5 or CAPA)
 
 ## Output Format
 
