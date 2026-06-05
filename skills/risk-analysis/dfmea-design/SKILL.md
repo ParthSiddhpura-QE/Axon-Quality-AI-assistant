@@ -8,7 +8,7 @@ description: >-
 license: MIT
 metadata:
   author: RBraga01
-  version: "1.0"
+  version: "1.1"
   iso-9001: "8.3"
   iatf-16949: "8.3.3.3"
   aiag-reference: "AIAG-VDA FMEA Handbook 2019, DFMEA chapters"
@@ -18,6 +18,25 @@ metadata:
 ---
 
 # Design FMEA (DFMEA) — AIAG-VDA 2019
+
+## Goal
+
+Identify and mitigate design risks by analysing functions, interfaces, and failure modes — so that design weaknesses are resolved before release to manufacturing, and the results feed directly into the DVP, PFMEA, and Control Plan.
+
+## Required Execution Checklist
+
+- [ ] DFMEA scope defined: boundary diagram complete, inside/outside boundary identified
+- [ ] Product hierarchy mapped: system → subsystem → component → interface (Step 2)
+- [ ] All interfaces identified — internal (component-to-component), external (environment), and user/assembly
+- [ ] All functions defined with Verb + Noun + Measurable Standard (Step 3)
+- [ ] Each function has a measurable verification method confirmed in the DVP
+- [ ] Failure chain complete: Effect → Mode → Cause for each function (Step 4)
+- [ ] All Failure Causes validated using engineering analysis (FEA, calculation) or test evidence — not assumptions
+- [ ] S/O/D ratings justified using analysis, test data, or design history
+- [ ] All H-AP items have a defined action, named owner, and target date
+- [ ] DFMEA → DVP, PFMEA, and drawing linkage verified before release to manufacturing
+
+---
 
 ## When to use
 
@@ -67,7 +86,7 @@ For each component, identify:
 - Interfaces to the environment (external): heat, vibration, corrosion, electromagnetic
 - Interfaces to the user or assembly process
 
-Interfaces are where most design failures occur.
+Interfaces are where most design failures occur. Each interface must be analysed as a potential failure location in its own right — not just the components that share it. In practice, at least 50% of DFMEA effort should focus on interfaces and interactions; component-only analysis misses the most common field failure modes.
 
 ---
 
@@ -83,6 +102,8 @@ Examples:
 - System function: "Provide steering angle feedback with latency < 50ms"
 
 Identify **Special Characteristics** from the drawing — these get S = 9 or 10 in Step 5.
+
+**Testability rule:** Every function must be measurable and verifiable — a test or analysis method must exist in the DVP. A function with no verification method cannot receive a credible D rating in Step 5.
 
 ---
 
@@ -108,6 +129,8 @@ What design parameter or design decision causes the failure mode?
 - Tolerance stack-up causing interference
 - Interface design not accounting for assembly variation
 
+**Failure Cause validation:** Failure Causes must be validated using engineering analysis (FEA, structural calculation, thermal simulation) or test evidence. Unverified assumptions — "probably," "likely," "may be" — are not acceptable as final Failure Causes. Use CAE (FEA, simulation), test data, and field return data to support both the failure modes identified and their causes. For post-field-failure DFMEA updates, the FC must match the validated root cause from the 8D or field investigation.
+
 ---
 
 ### Step 5 — Risk Analysis
@@ -129,6 +152,8 @@ Use the same S/O/D ratings and AP table as PFMEA (see [action-priority-ap](../ac
 
 D = 10 means no design verification for this failure mode. This is common for new features — it drives the DVP.
 
+**Ratings justification:** All S/O/D ratings must be justified using analysis, test data, or design history. A rating without documented justification will not withstand OEM audit. Where design history exists from similar components, reference it explicitly. Where data is absent, mark O and D as preliminary and flag the DVP entry that will confirm them.
+
 ---
 
 ### Step 6 — Optimization
@@ -142,6 +167,8 @@ For H-AP items in DFMEA, actions typically fall into:
 
 **DFMEA → DVP linkage:**
 Every detection control (D rating improvement) must have a corresponding entry in the Design Verification Plan (DVP). If you improve D because "we will test it," the test must exist in the DVP.
+
+**Action tracking:** All actions must be tracked to closure with objective evidence — test results, simulation output, or updated analysis. Actions marked "complete" without verification evidence are not acceptable. Open H-AP items past their target date must be escalated to the design review owner or programme manager, with a revised date and documented reason for delay.
 
 ---
 
@@ -164,6 +191,17 @@ The DFMEA and PFMEA are linked:
 | Interface failure modes | → | PFMEA failure modes for assembly steps |
 | Design intent (function) | → | Process step function requirements |
 
+## Mandatory DFMEA review events (APQP / IATF 16949 §8.3)
+
+| Trigger | Required action |
+|---------|----------------|
+| New product development | Start DFMEA at APQP Phase 2 — before design freeze. DFMEA initiated after freeze has no corrective value. |
+| Engineering change request (ECR) | Review and update the DFMEA for all functions, failure modes, and interfaces affected by the change — before the change is released. |
+| Design milestone / design review | Present DFMEA status: open H-AP items, actions, and revised ratings. DFMEA must be current at each gate. |
+| Field failure with confirmed design root cause | Update FC, ratings, and actions to match validated root cause from 8D/field investigation. Update DVP to include the failure mode. |
+
+A DFMEA that is not updated through the programme lifecycle is a design quality assurance gap — not a living document.
+
 ## Common mistakes
 
 - **Starting DFMEA after design is frozen** — DFMEA has no value if no changes can be made
@@ -183,3 +221,7 @@ At the start of each use, ask the user:
 > Default: A."
 
 Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.
+
+## Reference files
+
+- [Interface matrix construction guide](references/interface-matrix.md)
