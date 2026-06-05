@@ -1,10 +1,10 @@
 ---
 name: ncr-writing
 description: >-
-  Non-Conformance Report (NCR) writing for quality escapes, incoming inspection failures,
-  and in-process defects. Produces objective-evidence language, correct severity grading
-  (Critical/Major/Minor), and disposition recommendations. Use when documenting a
-  non-conformance for internal records, supplier feedback, or customer notification.
+  Write a non-conformance report, NCR, reject a supplier, or document a defect with
+  objective-evidence language and correct severity grading (Critical/Major/Minor). Covers
+  disposition recommendations and segregation requirements for incoming inspection failures,
+  in-process defects, customer returns, and audit findings.
 license: MIT
 metadata:
   author: RBraga01
@@ -153,6 +153,19 @@ Immediate containment: 100% incoming inspection of remaining 1,500 units.
 - **Incorrect severity grade** — failing to grade Critical when safety is at risk
 - **UAI without engineering approval** — verbal approval is not acceptable
 - **Not segregating before writing the NCR** — segregation must happen immediately, before the paperwork
+
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.
 
 ## Reference files
 

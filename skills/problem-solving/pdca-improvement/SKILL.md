@@ -1,10 +1,10 @@
 ---
 name: pdca-improvement
 description: >-
-  Plan-Do-Check-Act (PDCA / Deming cycle) for structured continuous improvement. Guides
-  through problem analysis, action planning, piloting, verification, and standardisation.
-  Use for proactive improvement initiatives, process optimisation, and implementing lessons
-  learned. Distinguished from 8D: PDCA is for improvement, 8D is for reactive problem solving.
+  Run a PDCA cycle, Plan Do Check Act improvement cycle, or structured improvement project.
+  Guides through problem analysis, piloting, verification, and standardisation. Distinguished
+  from 8D: PDCA is for proactive improvement initiatives, 8D is for reactive defect response.
+  Use for process optimisation, lessons learned implementation, and quality objectives.
 license: MIT
 metadata:
   author: RBraga01
@@ -133,3 +133,16 @@ Ask:
 - **Treating Act as permanent before Check** — standardising before the pilot result is confirmed
 - **One cycle only** — PDCA is a cycle; if the first cycle doesn't solve it, run another
 - **Using PDCA for urgent defects** — for customer complaints or safety issues, use 8D instead
+
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.

@@ -1,11 +1,11 @@
 ---
 name: iatf-16949-audit
 description: >-
-  Internal audit guidance for IATF 16949:2016 supplemental requirements — the automotive
-  additions to ISO 9001. Covers customer-specific requirements (CSR), contingency planning,
-  manufacturing process audits, error-proofing, and the 16 automotive-specific clauses.
-  Use for IATF 16949 internal audits, pre-assessment for third-party audits, or supplier
-  quality audits at automotive supply chain organisations.
+  Conduct an IATF audit, check supplemental requirements, or prepare for a manufacturing
+  process audit or IATF 16949:2016 third-party assessment. Covers customer-specific
+  requirements (CSR), all 16 automotive supplemental clauses, and the three required audit
+  types: QMS audit, manufacturing process audit, and product audit. Use for internal IATF
+  audits or supplier quality audits at automotive organisations.
 license: MIT
 metadata:
   author: RBraga01
@@ -284,6 +284,19 @@ A process audit should result in a process audit score (VDA 6.3 uses a percentag
 5. **SC not consistently marked** across drawing, PFMEA, control plan, and work instruction
 6. **Error-proofing not tested** at every start of production (frequency not defined or records not kept)
 7. **Problem-solving procedure exists** but CARs in practice skip root cause or VOE
+
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.
 
 ## Reference files
 

@@ -1,10 +1,10 @@
 ---
 name: dfmea-design
 description: >-
-  Design Failure Mode and Effects Analysis (DFMEA) per AIAG-VDA FMEA Handbook 2019.
-  Analyses design intent, interface failures, and design robustness before manufacturing.
-  Use during new product development, design changes, or when a field failure reveals
-  a design weakness. Required for IATF 16949 §8.3 design responsibility scope.
+  Build a design risk analysis, DFMEA worksheet, or interface analysis using the AIAG-VDA
+  FMEA Handbook 2019. Covers design intent, interface failures, boundary diagram, and design
+  robustness before manufacturing. Use during new product development, design changes, or
+  when a field failure reveals a design weakness. Required for IATF 16949 §8.3 scope.
 license: MIT
 metadata:
   author: RBraga01
@@ -170,3 +170,16 @@ The DFMEA and PFMEA are linked:
 - **Only analysing the component, not the interfaces** — most design failures are interface failures
 - **Improving D without adding DVP tests** — detection credit without actual testing
 - **DFMEA and PFMEA teams working in silos** — they must share severity ratings and special characteristics
+
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.

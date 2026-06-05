@@ -1,10 +1,10 @@
 ---
 name: 8d-coach
 description: >-
-  Interactive 8D problem-solving coach that guides through all 8 disciplines step by step.
-  Validates root cause depth, rejects weak containment, checks D7 systemic prevention.
-  Use when running a live 8D investigation and needing structured guidance, or when
-  reviewing a draft 8D for quality and completeness before customer submission.
+  Interactive 8D coach for running a live G8D or TOPS-8D investigation step by step,
+  validating root cause depth, rejecting weak containment, and checking D7 systemic
+  prevention. Use when running an 8D investigation live, reviewing a draft 8D before
+  customer submission, or training a team on the 8 Disciplines methodology.
 license: MIT
 compatibility: Designed for Claude Code and similar interactive AI coding agents
 metadata:
@@ -177,6 +177,19 @@ On completion, generate a summary:
 > "8D complete. Summary: [brief D2 problem statement]. Root cause of occurrence: [D4 occurrence]. Root cause of escape: [D4 escape]. PCA: [D5]. Verified effective on [D6 date]. PFMEA/CP/WI updated [D7 dates]. Closed [D8 date]."
 
 ---
+
+## Output Format
+
+Ask once at the start of the session:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Apply the chosen format to all outputs generated during the session. If the platform or session context already defines a format preference, skip this question.
 
 ## Tone guidelines
 

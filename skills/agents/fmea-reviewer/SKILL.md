@@ -1,10 +1,10 @@
 ---
 name: fmea-reviewer
 description: >-
-  PFMEA and DFMEA gap auditor against AIAG-VDA FMEA Handbook 2019 criteria. Reviews an
-  existing FMEA for missing failure modes, incorrect AP ratings, unaddressed H-AP items,
-  missing special characteristics, and PFMEA-to-Control Plan linkage gaps. Returns a
-  structured gap report with specific findings and required actions.
+  PFMEA and DFMEA gap audit against AIAG-VDA FMEA Handbook 2019 — reviews an existing
+  FMEA for missing failure modes, incorrect AP ratings, unaddressed H-AP items, missing
+  special characteristics, and PFMEA-to-Control Plan linkage gaps. Returns a structured
+  gap report with specific findings and required actions before PPAP or audit submission.
 license: MIT
 compatibility: Designed for Claude Code and similar interactive AI coding agents
 metadata:
@@ -139,6 +139,19 @@ STRENGTHS:
 ```
 
 ---
+
+## Output Format
+
+Ask once at the start of the session:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Apply the chosen format to all outputs generated during the session. If the platform or session context already defines a format preference, skip this question.
 
 ## Tone guidelines
 

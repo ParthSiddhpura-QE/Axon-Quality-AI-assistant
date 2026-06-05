@@ -1,10 +1,10 @@
 ---
 name: 5why-root-cause
 description: >-
-  Structured 5-Why root cause analysis with chain validation. Builds a Why chain from
-  symptom to systemic root cause, validates each step with evidence, detects circular
-  reasoning and symptomatic answers. Use for any quality problem requiring root cause
-  identification — 8D D4, CAPA, FMEA cause analysis, or internal investigation.
+  Drill into root cause with a 5-Why why chain, why analysis, or structured root cause
+  investigation. Builds a Why chain from symptom to systemic root cause, validates each
+  step with evidence, and detects circular reasoning. Use for 8D D4, CAPA, FMEA cause
+  analysis, or any quality investigation requiring confirmed root cause identification.
 license: MIT
 metadata:
   author: RBraga01
@@ -124,6 +124,19 @@ A validated 5-Why must include:
 3. Root cause statement
 4. Reversal check (one sentence confirming logical flow)
 5. Validation method (how the root cause was confirmed)
+
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.
 
 ## Reference files
 

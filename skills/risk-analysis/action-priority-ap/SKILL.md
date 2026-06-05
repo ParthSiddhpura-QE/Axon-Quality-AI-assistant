@@ -1,10 +1,10 @@
 ---
 name: action-priority-ap
 description: >-
-  Action Priority (AP) table from AIAG-VDA FMEA Handbook 2019 that replaces legacy RPN
-  (Risk Priority Number) in modern PFMEA and DFMEA. Explains H/M/L classification logic,
-  mandatory action requirements, and why AP is more reliable than RPN. Use when assigning
-  risk levels in PFMEA or DFMEA, or when auditing FMEA documents for compliance.
+  Assign AP table ratings (H-AP, M-AP, L-AP) in PFMEA or DFMEA — the RPN replacement from
+  AIAG-VDA FMEA Handbook 2019. Explains H/M/L classification logic, mandatory action
+  requirements for High Priority items, and OEM-specific thresholds. Use when assigning risk
+  levels in PFMEA or DFMEA, or auditing FMEA documents for AP compliance.
 license: MIT
 metadata:
   author: RBraga01
@@ -156,3 +156,16 @@ Audit questions:
 | Stellantis | H-AP items require SQE approval for acceptance without action |
 
 Always check the customer's current CSR (Customer-Specific Requirements) — these override general guidance.
+
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.

@@ -1,10 +1,10 @@
 ---
 name: 8d-problem-solving
 description: >-
-  Structured 8 Disciplines (8D) problem-solving methodology for quality failures, customer
-  complaints, and non-conformances. Covers D0 emergency response through D8 team recognition.
-  Use when a defect, complaint, or quality escape requires documented root cause analysis and
-  permanent corrective action — especially for automotive OEM customer requirements.
+  Open an 8D, run a G8D or TOPS-8D investigation, respond to a warranty complaint, or handle
+  a customer quality escape with the 8 Disciplines methodology. Covers D0 emergency response
+  through D8 team recognition with gate validation. Required for automotive OEM complaints —
+  Ford, BMW, VW, Stellantis — and any quality escape needing documented root cause and PCA.
 license: MIT
 metadata:
   author: RBraga01
@@ -218,6 +218,19 @@ Before closing, verify:
 - **D3 as D6:** treating containment as the permanent fix ("we added 100% inspection" is not a PCA)
 - **Symptom as root cause:** "machine was miscalibrated" — why? "supplier sent wrong material" — why wasn't it caught?
 - **Not updating D7 documents:** the most common audit finding
+
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.
 
 ## Reference files
 

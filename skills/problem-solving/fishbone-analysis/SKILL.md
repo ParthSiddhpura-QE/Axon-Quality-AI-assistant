@@ -1,10 +1,10 @@
 ---
 name: fishbone-analysis
 description: >-
-  Ishikawa (fishbone) cause-and-effect diagram using the 6M framework: Man, Machine, Method,
-  Material, Measurement, Mother Nature (Environment). Use to brainstorm and categorise all
-  possible causes of a quality problem before narrowing to root cause with 5-Why.
-  Essential for 8D D4 and CAPA investigations.
+  Build an Ishikawa diagram, cause and effect analysis, or 6M fishbone to brainstorm and
+  categorise all possible causes before narrowing to root cause with 5-Why. Covers Man,
+  Machine, Method, Material, Measurement, and Environment (Mother Nature). Essential for
+  8D D4 brainstorming sessions and CAPA root cause investigations.
 license: MIT
 metadata:
   author: RBraga01
@@ -139,3 +139,16 @@ Document the fishbone as a table (easier to include in reports than a diagram):
 - **Stopping at first-level causes** — "machine not calibrated" is a cause, but add sub-bone: why was it not calibrated?
 - **Not using data to confirm/discard** — every cause must be validated, not just listed
 - **Using fishbone as the root cause** — fishbone finds candidate causes; 5-Why finds root cause
+
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.

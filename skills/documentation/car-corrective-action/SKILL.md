@@ -1,10 +1,10 @@
 ---
 name: car-corrective-action
 description: >-
-  Corrective Action Request (CAR) writing covering root cause, corrective actions,
-  implementation evidence, and verification of effectiveness. Use to formally document
-  the response to an NCR, customer complaint, or audit finding. Includes verification
-  of effectiveness (VOE) requirements per ISO 9001 §10.2.
+  Write a corrective action report, CAPA, respond to an NCR or audit finding, or document
+  an 8D D5 root cause action. Covers the full CAR structure: root cause analysis, corrective
+  actions, implementation evidence, and verification of effectiveness (VOE) per ISO 9001
+  §10.2. Use for any quality escape requiring documented systemic corrective action.
 license: MIT
 metadata:
   author: RBraga01
@@ -174,3 +174,16 @@ A CAR may only be closed when ALL of the following are true:
 - **Closing without VOE** — the most common reason for recurring non-conformances
 - **Implementing actions without updating PFMEA and Control Plan** — next audit will find the gap
 - **Generic actions** — "review procedures" → not specific; must state which procedure, revised to say what, by whom, by when
+
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.

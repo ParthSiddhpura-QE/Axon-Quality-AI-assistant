@@ -1,10 +1,10 @@
 ---
 name: is-is-not-scoping
 description: >-
-  Is/Is-Not problem scoping tool for quality investigations. Defines the precise boundary
-  of a problem by contrasting what IS observed vs what IS NOT — eliminating hypotheses that
-  don't fit the observed pattern. Used in 8D D2 problem description and CAPA investigations.
-  A Ford-originated technique standard in automotive quality.
+  Problem scoping with Is/Is-Not for 8D D2 problem description, CAPA investigation, or
+  hypothesis elimination. Defines the precise boundary by contrasting what IS observed vs
+  what IS NOT — eliminating hypotheses that don't fit the pattern. A Ford-originated
+  automotive technique used in every structured quality investigation.
 license: MIT
 metadata:
   author: RBraga01
@@ -113,3 +113,16 @@ A complete Is/Is-Not matrix (table format) with:
 - **Leaving cells empty** — if you don't know, mark "unknown — to be investigated"
 - **Not using IS NOT** — the IS NOT column is where hypotheses get eliminated; skipping it wastes investigation time
 - **Vague IS statements** — "some parts are bad" → must be: "23.5% of batch 2026-05-12 are non-conforming on dimension X"
+
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.

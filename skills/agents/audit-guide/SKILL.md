@@ -1,10 +1,10 @@
 ---
 name: audit-guide
 description: >-
-  Interactive internal audit agent for ISO 9001:2015 and IATF 16949:2016. Guides an
-  auditor through key clauses interactively, scores findings (Major NC / Minor NC / OFI),
-  and generates a structured audit report. Use when conducting an internal audit and
-  needing a structured, clause-by-clause guide with real-time finding documentation.
+  Interactive internal audit guide for ISO 9001:2015 and IATF 16949:2016 — walks through
+  key clauses interactively, scores findings as Major NC / Minor NC / OFI, and generates
+  a structured audit report. Use when conducting an internal audit and needing real-time
+  finding documentation and a structured clause-by-clause audit approach.
 license: MIT
 compatibility: Designed for Claude Code and similar interactive AI coding agents
 metadata:
@@ -177,6 +177,19 @@ Findings are based on observed objective evidence.
 ```
 
 ---
+
+## Output Format
+
+Ask once at the start of the session:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Apply the chosen format to all outputs generated during the session. If the platform or session context already defines a format preference, skip this question.
 
 ## Tone guidelines
 

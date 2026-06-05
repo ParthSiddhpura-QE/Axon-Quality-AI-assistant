@@ -1,10 +1,10 @@
 ---
 name: 8d-report-writing
 description: >-
-  Writing the customer-facing 8D report for OEM submission. Covers format requirements,
-  language quality, evidence standards, and discipline-by-discipline writing rules for
-  D0–D8. Use when preparing an 8D report for submission to Ford, BMW, VW/Audi, Stellantis,
-  or any customer requiring a formal 8D closure document.
+  Submit an 8D to a customer, format a Ford 8D report, BMW G8D, VW QMSS, or OEM complaint
+  response for formal submission. Covers OEM-specific format requirements, evidence standards,
+  and discipline-by-discipline writing rules for D0–D8. Use when preparing an 8D report for
+  Ford, BMW, VW/Audi, Stellantis, or any customer requiring formal 8D closure.
 license: MIT
 metadata:
   author: RBraga01
@@ -189,6 +189,19 @@ Brief close statement. Professional and factual.
 | "Going forward, we will..." | Specific action with date implemented |
 
 An 8D report is a technical document. Apologetic or vague language reduces credibility.
+
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.
 
 ## Reference files
 

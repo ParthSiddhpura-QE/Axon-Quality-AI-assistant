@@ -1,10 +1,10 @@
 ---
 name: iso-9001-internal-audit
 description: >-
-  Internal audit guidance for ISO 9001:2015 covering all 10 clauses. Provides key audit
-  questions by clause, finding classification (Major/Minor/OFI), and audit report writing.
-  Use when planning or conducting an ISO 9001 internal audit, or when preparing for a
-  third-party certification or surveillance audit.
+  Conduct an internal audit by clause, answer ISO 9001 internal audit questions, or prepare
+  evidence for §4 §5 §6 §7 §8 §9 §10. Provides key audit questions by clause, finding
+  classification (Major NC / Minor NC / OFI), and audit report writing. Use when planning
+  or conducting an ISO 9001:2015 internal audit or preparing for third-party certification.
 license: MIT
 metadata:
   author: RBraga01
@@ -299,6 +299,19 @@ REQUIRED ACTIONS:
 - **Clause-hunting vs. process approach:** audit the process first, then map to clauses — not the other way round
 - **Downgrading findings under pressure:** if the evidence supports a Major NC, write a Major NC
 - **Not following up previous findings:** the audit programme must track closure of prior CARs
+
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.
 
 ## Reference files
 

@@ -1,11 +1,11 @@
 ---
 name: pfmea-process
 description: >-
-  Process Failure Mode and Effects Analysis (PFMEA) per AIAG-VDA FMEA Handbook 2019.
-  Covers all 7 steps: Planning, Structure Analysis, Function Analysis, Failure Analysis,
-  Risk Analysis (Action Priority AP table), Optimization, and Results Documentation.
-  Use when developing a new process, revising an existing process, or after a quality escape.
-  Required by IATF 16949 and automotive customer-specific requirements.
+  Build a PFMEA worksheet, process risk analysis, or AP table using the AIAG-VDA FMEA
+  Handbook 2019 7-step approach. Covers Structure Analysis, Function Analysis, Failure
+  Analysis, Risk Analysis (Action Priority H/M/L), Optimization, and Documentation.
+  Required by IATF 16949 and OEM customer-specific requirements for new processes,
+  process changes, and post-escape PFMEA updates.
 license: MIT
 metadata:
   author: RBraga01
@@ -215,6 +215,19 @@ Before releasing the PFMEA:
 - [ ] No H-AP items remain open without documented escalation reason
 - [ ] Detection controls in PFMEA match the Control Plan
 - [ ] Prevention controls in PFMEA match Work Instructions
+
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.
 
 ## Reference files
 

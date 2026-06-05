@@ -79,6 +79,60 @@ metadata:
 [What a good output looks like]
 ```
 
+## Output Format requirement
+
+Every skill must include a `## Output Format` section. This lets users choose how they receive output at invocation time and makes skills work across platforms (markdown renderers, Excel paste, Word documents, email).
+
+**Mandatory pattern for skills** (copy verbatim):
+
+```markdown
+## Output Format
+
+At the start of each use, ask the user:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Adapt all output sections to the chosen format. If the platform or session context already defines a format preference, skip this question.
+```
+
+**For agents** (interactive, multi-step skills): replace "At the start of each use" with "Ask once at the start of the session" and the last sentence with "Apply the chosen format to all outputs generated during the session."
+
+Skills submitted **without** this section will be returned for revision.
+
+---
+
+## Description engineering
+
+The `description` field is how AI agents discover your skill. Write it to be found, not just to be accurate.
+
+**Rules:**
+- **Maximum 1024 characters** for the full description
+- **Key trigger phrases must appear in the first 400 characters.** AI agents scan the start of descriptions. Triggers buried past 400 chars reduce discovery significantly.
+- Include **at least 3 literal phrases** a user would naturally type — e.g., "write an NCR", "open an 8D", "drill into root cause", "audit clause §4"
+- Include methodology terms: standard names, OEM acronyms, clause numbers, tool names
+
+**Good (triggers in first 400 chars):**
+```
+description: >-
+  Write a non-conformance report, NCR, reject a supplier, or document a defect with
+  objective-evidence language and correct severity grading (Critical/Major/Minor)...
+```
+
+**Avoid (triggers buried after 400 chars):**
+```
+description: >-
+  Non-Conformance Report (NCR) writing module covering the full lifecycle of quality escape
+  documentation including all fields defined in ISO 9001 §8.7... Use when you need to write
+  an NCR or reject a supplier delivery.
+```
+
+---
+
 ## Domains open for contribution
 
 | Domain | What's needed |
@@ -102,10 +156,14 @@ metadata:
 ## Submission checklist
 
 - [ ] `name` field matches the directory name exactly
-- [ ] `description` contains relevant methodology keywords
+- [ ] `description` trigger phrases appear within the first 400 characters
+- [ ] `description` contains at least 3 literal phrases users would naturally type
+- [ ] `description` is ≤ 1024 characters total
 - [ ] Framework mappings are accurate (check the standard before claiming a clause)
 - [ ] Content reflects actual methodology — no generic AI text
 - [ ] References cite specific standard editions (e.g., "AIAG-VDA FMEA 2019, Step 5")
+- [ ] `## Output Format` section included with the standard ask mechanism (see above)
+- [ ] If a `references/` or `assets/` file is linked in SKILL.md, the file exists on disk
 - [ ] Tested with at least one AI agent before submitting
 
 ## Pull request process

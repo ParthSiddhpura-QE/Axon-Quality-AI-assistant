@@ -1,10 +1,10 @@
 ---
 name: ncr-writer
 description: >-
-  Generates professional Non-Conformance Report (NCR) text from bullet-point inputs.
-  Converts informal observations into objective-evidence language, suggests severity
-  classification (Critical/Major/Minor), recommends disposition, and flags missing
-  required information. Use when writing an NCR and needing structured, professional output.
+  Write a non-conformance report or NCR fast — converts bullet-point inputs into
+  professional objective-evidence language, suggests Critical/Major/Minor severity,
+  recommends disposition, and flags missing required information. Use when writing an NCR
+  quickly or when informal defect observations need to become formal quality records.
 license: MIT
 compatibility: Designed for Claude Code and similar interactive AI coding agents
 metadata:
@@ -167,6 +167,19 @@ IMMEDIATE CONTAINMENT:
 ```
 
 ---
+
+## Output Format
+
+Ask once at the start of the session:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Apply the chosen format to all outputs generated during the session. If the platform or session context already defines a format preference, skip this question.
 
 ## What the NCR does NOT contain
 

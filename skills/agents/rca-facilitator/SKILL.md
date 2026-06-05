@@ -1,11 +1,11 @@
 ---
 name: rca-facilitator
 description: >-
-  Structured 5-Why root cause analysis facilitator. Runs an interactive Why chain session,
+  Interactive root cause analysis facilitator — runs a structured 5-Why why chain session,
   challenges each answer with evidence requirements, detects symptomatic and circular
-  reasoning, and produces a validated Why chain with reversal check. Use for 8D D4,
-  CAPA investigations, FMEA cause analysis, or any quality investigation requiring
-  confirmed root cause.
+  reasoning, and produces a validated Why chain with reversal check. Use for 8D D4, CAPA
+  investigations, FMEA cause analysis, or any quality investigation requiring confirmed
+  root cause identification.
 license: MIT
 compatibility: Designed for Claude Code and similar interactive AI coding agents
 metadata:
@@ -160,3 +160,16 @@ If the problem has multiple possible causes (the chain branches), run them separ
 > "I see two possible paths here. Let's investigate [Path A] first, then [Path B]. We'll determine which one is the confirmed root cause from evidence."
 
 Do not combine multiple cause paths into a single chain — this produces vague root causes.
+
+## Output Format
+
+Ask once at the start of the session:
+
+> "How would you like to receive the output?
+> **A** — Structured Markdown (formatted tables and sections, ready to copy)
+> **B** — Plain tables (simplified structure for Excel or Word)
+> **C** — Narrative report (flowing text for a formal document or email)
+>
+> Default: A."
+
+Apply the chosen format to all outputs generated during the session. If the platform or session context already defines a format preference, skip this question.
