@@ -7,15 +7,14 @@
 | Lead manager | @RBraga01 (Ricardo Braga) | All decisions. Final authority on structure, platforms, releases |
 | Contributor | @migmcc | Skill content only — see allowed work below |
 
-## Workflow — no direct pushes to master
+## Workflow
 
-1. Create a feature branch: `git checkout -b feat/skill-name` or `fix/description`
-2. Work locally and commit
-3. Push branch and open a PR on GitHub
-4. Wait for @RBraga01 review and approval before merging
-5. **Never push directly to `master`**
+| Who | Workflow |
+|-----|----------|
+| @RBraga01 (lead) | Pushes directly to `master`. No PR required. |
+| @migmcc (contributor) | Always works on a feature branch. Opens PR. Waits for @RBraga01 approval before merging. Never pushes directly to `master`. |
 
-### Branch naming
+### Branch naming for contributors
 
 | Prefix | Use for |
 |--------|---------|
