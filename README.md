@@ -1,12 +1,12 @@
 # Quality-Engineering-Skills
 
-**40 structured quality engineering skills for AI agents — ISO 9001, IATF 16949, AIAG-VDA FMEA, VDA 6.3.**
+**Structured quality engineering skills for AI agents — ISO 9001, IATF 16949, AIAG-VDA FMEA, VDA 6.3.**
 Works with Claude Code, Codex CLI, Cursor, Gemini CLI, and 20+ AI coding platforms.
 
 [![agentskills.io](https://img.shields.io/badge/agentskills.io-compatible-blue)](https://agentskills.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-40-orange)](skills/)
-[![Agents](https://img.shields.io/badge/agents-5-purple)](skills/agents/)
+[![Skills](https://img.shields.io/badge/skills-13-orange)](skills/)
+[![Agents](https://img.shields.io/badge/agents-6-purple)](skills/agents/)
 
 ---
 
@@ -134,6 +134,7 @@ Interactive internal audit for ISO 9001 or IATF 16949. Works clause by clause, s
 | [rca-facilitator](skills/agents/rca-facilitator/) | Structured 5-Why with evidence validation |
 | [ncr-writer](skills/agents/ncr-writer/) | Professional NCR generator from bullet inputs |
 | [audit-guide](skills/agents/audit-guide/) | Interactive ISO 9001 / IATF internal audit |
+| [skill-auditor](skills/agents/skill-auditor/) | Automated audit and scoring of SKILL.md and REFERENCE files against framework standards |
 
 </details>
 
@@ -181,8 +182,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the skill format and submission proce
 
 ---
 
-## Author
+## Authors
 
-Built by [RBraga01](https://github.com/RBraga01) — 15 years automotive supplier quality engineering, claims management, 8D and FMEA practitioner.
+**[Ricardo Braga](https://github.com/RBraga01)** — 15 years automotive supplier quality engineering, claims management specialist (~30 electronic component suppliers), 8D and FMEA practitioner.
+
+**[Miguel Machado](https://github.com/migmcc)** — 25+ years quality engineering experience, co-founder [iPS](https://github.com/RBraga01/iPS).
 
 Part of the [iPS](https://github.com/RBraga01/iPS) quality management ecosystem.
