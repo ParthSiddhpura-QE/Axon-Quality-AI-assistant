@@ -19,6 +19,7 @@ Prevent further harm while the team is being assembled. D0 answers: "Is anyone a
 1. **Safety assessment** — Is this a safety or regulatory issue?
    - If yes: escalate immediately to management, notify customer, do not ship
    - Document the safety decision regardless of outcome (even "not a safety issue" needs evidence)
+   - **If safety or regulatory risk is confirmed: STOP the standard 8D timeline. Do not proceed to D1–D3 without documented management authorisation. The 8D resumes only after escalation is handled and management has acknowledged the risk in writing.**
 
 2. **Suspect material identification** — What is already in the field, at the customer, or in transit?
    - Map all batches, serial numbers, or shipment dates in the suspect window
@@ -109,6 +110,7 @@ Stop the non-conforming product from reaching the customer while D4–D5 are in 
 - Must be past tense with evidence (not "we will sort" — "sorting completed on date, N parts rejected")
 - Must physically prevent escape
 - Must have an implementation date and responsible person
+- **Containment is temporary — it must never be accepted as a permanent corrective action.** "We added 100% inspection" is a D3 ICA. The D5 PCA must eliminate or reduce the root cause, not just improve detection.
 
 ### D3 gate — complete when
 - [ ] ICA implemented (past tense) with implementation date
@@ -145,16 +147,21 @@ Stop the non-conforming product from reaching the customer while D4–D5 are in 
 2. Reduce occurrence (prevention control)
 3. Improve detection (detection control)
 
+**Detection-only actions are not acceptable as the sole PCA if elimination or occurrence reduction is technically feasible.** Improving detection catches defects after they are made — it does not prevent them. A detection PCA alone must be justified in writing with evidence that prevention is not achievable.
+
 ### D5 gate — complete when
 - [ ] One PCA per root cause selected
 - [ ] Verification plan: what metric, what target, what method
+- [ ] If detection-only PCA: documented justification that prevention was evaluated and ruled out
 
 ---
 
 ## D6 — Implement and Verify PCA Effectiveness
 
 ### Verification requirements
-- Sufficient production volume (minimum 300 units or 30 shifts typical)
+- **Sufficient production volume based on statistical confidence** — define sample size from the observed defect rate and risk level, not from a fixed number. Higher defect rate or safety-related failure mode requires a larger verification sample.
+  - Reference formula: n ≥ log(α) / log(1 − p), where p = pre-PCA defect rate and α = acceptable probability of missing recurrence (typically 0.05).
+  - Example: defect rate 2% (p = 0.02), α = 0.05 → n ≥ 148 units minimum.
 - Before/after comparison with same metric as D2
 - Zero recurrence of the exact defect mode
 - ICA removed only after D6 verification is complete with data
@@ -185,6 +192,7 @@ Stop the non-conforming product from reaching the customer while D4–D5 are in 
 - [ ] Customer notified of closure (if customer-initiated)
 - [ ] Team recognition documented
 - [ ] 8D report filed in quality records
+- [ ] All D0–D7 objective evidence archived and traceable (photos, measurement records, updated documents with revision numbers, training records, verification data)
 
 ---
 
@@ -199,3 +207,32 @@ Stop the non-conforming product from reaching the customer while D4–D5 are in 
 | GM | Global 8D | Recommended | Covisint |
 
 See [oem-formats](../../documentation/8d-report-writing/references/oem-formats.md) for full detail.
+
+---
+
+## Global 8D Validation Checklist
+
+Use at closure review (D8) to confirm the full 8D is audit-ready. All items must be checked before the champion signs off.
+
+| # | Item | Complete? |
+|---|------|-----------|
+| 1 | D0: Safety and regulatory risk assessed and documented (even if "not a risk") | ☐ |
+| 2 | D0: Suspect material identified by batch/lot and physically segregated | ☐ |
+| 3 | D1: Cross-functional team with champion and team leader named | ☐ |
+| 4 | D2: Problem described with measured values vs. specification (not adjectives) | ☐ |
+| 5 | D2: Is/Is-Not matrix completed with specific facts | ☐ |
+| 6 | D3: Containment implemented (past tense) with date, responsible person, and effectiveness evidence | ☐ |
+| 7 | D4: Root Cause of Occurrence identified, validated with data or experiment | ☐ |
+| 8 | D4: Root Cause of Escape identified, validated with data or experiment | ☐ |
+| 9 | D4: Both root causes are systemic (not "human error" or "operator mistake") | ☐ |
+| 10 | D5: One PCA per root cause, addressing the root cause directly (not the symptom) | ☐ |
+| 11 | D5: If detection-only PCA: justification documented that prevention was evaluated | ☐ |
+| 12 | D6: Verification data shows zero recurrence over a statistically sufficient sample | ☐ |
+| 13 | D6: ICA formally removed after verification is complete | ☐ |
+| 14 | D7: PFMEA updated — revision number and date recorded | ☐ |
+| 15 | D7: Control Plan updated — revision number and date recorded | ☐ |
+| 16 | D7: Work Instructions updated and re-issued — revision number and date recorded | ☐ |
+| 17 | D7: Horizontal deployment assessed; actions documented for similar parts/processes | ☐ |
+| 18 | D8: All D0–D7 evidence archived and traceable | ☐ |
+| 19 | D8: Champion sign-off obtained | ☐ |
+| 20 | D8: Customer notified of closure (if customer-initiated complaint) | ☐ |
