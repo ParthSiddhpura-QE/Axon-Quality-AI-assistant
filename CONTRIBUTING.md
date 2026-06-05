@@ -168,9 +168,11 @@ description: >-
 
 ## Pull request process
 
-1. Fork the repository
-2. Create a branch: `feat/skill-name` or `feat/domain-expansion`
-3. Add your skill(s)
-4. Open a PR with: skill name, standard it implements, domain expertise (your role/industry)
+1. Clone the repository (requires collaborator access — contact @RBraga01)
+2. Create a branch from master: `feat/skill-name` or `fix/skill-name`
+3. Stage only your skill files — **never use `git add .` or `git add -A`**. Add files explicitly by path.
+4. Verify with `git status` before committing — the diff must contain only your intended files
+5. Open a PR with: skill name, standard it implements, your domain expertise (role/industry)
+6. All PRs are reviewed by @RBraga01 before merge
 
 Skills from practitioners are prioritised. Generic content will be rejected.

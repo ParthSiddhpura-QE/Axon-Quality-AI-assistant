@@ -7,8 +7,8 @@ _Last updated: 2026-06-05. Auto-updated each release._
 | Metric | Value |
 |--------|-------|
 | Total skills | 13 |
-| Total agents | 5 |
-| Reference files created | 9 |
+| Total agents | 6 |
+| Reference files created | 10 |
 | Skills with reference files | 9 / 13 |
 | Output Format section | 18 / 18 |
 
@@ -43,6 +43,7 @@ _Last updated: 2026-06-05. Auto-updated each release._
 | [rca-facilitator](skills/agents/rca-facilitator/SKILL.md) | 5why-root-cause | ✅ | 🟢 |
 | [ncr-writer](skills/agents/ncr-writer/SKILL.md) | ncr-writing | ✅ | 🟢 |
 | [audit-guide](skills/agents/audit-guide/SKILL.md) | iso-9001-internal-audit, iatf-16949-audit | ✅ | 🟢 |
+| [skill-auditor](skills/agents/skill-auditor/SKILL.md) | all skills (framework audit) | ✅ | 🟢 |
 
 ---
 
