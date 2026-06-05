@@ -3,6 +3,9 @@
 Reference for Process FMEA per the AIAG-VDA FMEA Handbook (2019 joint edition).
 Use alongside the [pfmea-process](../SKILL.md) skill and the [ap-table](../assets/ap-table.md).
 
+> **Scope:** This document covers reference logic — rating tables, failure chain rules, audit findings, and governance.
+> For the step-by-step execution workflow, see [pfmea-process SKILL.md](../SKILL.md).
+
 ---
 
 ## The 7-Step Approach — Summary
@@ -40,6 +43,8 @@ Process Item          (e.g., Steering Column Assembly Line)
 
 Every work element that can cause a failure mode should appear in the structure.
 
+**Traceability rule:** Every Work Element listed here must map to at least one Failure Cause in Step 4. A work element with no associated failure cause indicates an incomplete analysis — missing failure paths are the most common source of undetected risk.
+
 ### Structure Analysis tips
 - One row in the PFMEA per failure cause, not per failure mode
 - If a process step has 3 failure modes and each has 2 causes → 6 rows minimum
@@ -63,6 +68,8 @@ Every work element that can cause a failure mode should appear in the structure.
 All Special Characteristics (SC) from the drawing must be identified at this step.
 Use the customer-specific symbol (◆ for Ford, ★ for GM, shield for VW, etc.).
 SC failure modes always carry S = 9 or S = 10.
+
+**Testability rule:** Every Function must be measurable — a verification method must exist. "Tighten correctly" is not acceptable; "Tighten to 22 ± 2 Nm, verified by torque wrench calibrated to ±5%" is. A function with no measurable standard cannot be rated for Occurrence or Detection in Step 5.
 
 ---
 
@@ -109,6 +116,10 @@ Each failure cause gets its own row. For one failure mode, typical causes includ
 **Man:** procedure not followed, untrained operator, workstation ergonomics
 **Method:** incorrect parameter in work instruction, ambiguous instruction
 **Material:** incoming non-conformance, incorrect grade, contamination
+
+**Failure Cause validation:** Failure Causes must be validated using structured root cause analysis (e.g., [5-Why](../../../problem-solving/5why-root-cause/)). Unverified assumptions — "probably," "may be," "could be" — are not acceptable as final Failure Causes. For post-escape PFMEA updates, the FC must match the validated root cause from the 8D or CAPA closure, not a revised team opinion.
+
+This closes the system loop: **8D escape → 5-Why → validated FC → PFMEA update → Control Plan update → Work Instruction update.**
 
 ---
 
@@ -183,6 +194,8 @@ before product reaches the next customer (internal or external).
 - 100% manual inspection by an operator ≈ D = 6 (accounting for human fatigue and error)
 - Automated vision systems with calibrated sensitivity ≈ D = 2 or D = 3
 
+**Ratings justification rule:** All S / O / D ratings must include a documented justification — process capability data (Cpk), historical failure rates, field return data, or engineering rationale. A rating without justification is an unverified estimate and will be challenged in OEM audits. Where available, use real process data (SPC, Cpk, field returns) in preference to estimated ratings.
+
 ---
 
 ## Step 6 — Optimization
@@ -210,6 +223,12 @@ Document:
 - Revised D (should decrease if detection control added)
 - Revised AP (should be M or L after H-AP actions)
 
+### Action tracking and governance
+
+All actions must be tracked to completion with objective evidence: implementation date, responsible person's confirmation, and revised S/O/D recorded in the PFMEA. Evidence of action completion (photo, calibration record, updated WI revision) must be archived.
+
+**Escalation rule:** Open H-AP items past their target date must be escalated to management. Document: the reason for delay, the revised target date, and management acknowledgement. A PFMEA with overdue open H-AP items is not acceptable for PPAP submission or OEM audit.
+
 ---
 
 ## Step 7 — PFMEA to Control Plan Linkage
@@ -226,6 +245,19 @@ Every **prevention control** must be reflected in the Work Instruction.
 
 Failure to maintain this linkage is one of the most common IATF 16949 audit findings.
 
+### Mandatory PFMEA review events (IATF 16949 §8.3.3.3)
+
+The PFMEA must be reviewed and updated at each of the following events:
+
+| Trigger | Required action | Timing |
+|---------|----------------|--------|
+| Quality escape confirmed (8D closed) | Update FC, ratings, and actions to match validated root cause | Within 30 days of 8D closure |
+| Process change (equipment, method, material, layout) | Update structure, function, and failure analysis for changed elements | Before the change is released to production |
+| Annual review (IATF minimum) | Review all H-AP items; confirm ratings are still current; check CP and WI alignment | At least once per calendar year |
+| New customer-specific requirement | Review severity ratings and SC designations | Before next PPAP or submission |
+
+A PFMEA that has never been updated since initial release is a red flag in any IATF or OEM audit.
+
 ---
 
 ## Common PFMEA Audit Findings
@@ -239,3 +271,32 @@ Failure to maintain this linkage is one of the most common IATF 16949 audit find
 | Prevention controls not in Work Instructions | WI not updated after PFMEA | Update WI revision, reissue, retain evidence |
 | Occurrence rated without data justification | Guessing | Add reference to historical rate or Cpk data |
 | PFMEA not updated after quality escape | Reactive updates missed | PFMEA must be revised within 30 days of a confirmed escape |
+| Failure Causes are assumptions, not validated | 5-Why or RCA not performed | Validate each FC with structured analysis; post-escape FC must match 8D root cause |
+| Ratings with no data justification | Team estimated without evidence | Add Cpk reference, historical rate, or engineering rationale to each rating |
+
+---
+
+## Global PFMEA Validation Checklist
+
+Use at PFMEA release, PPAP submission, or audit preparation. All items must be confirmed before the PFMEA is considered complete.
+
+| # | Item | Complete? |
+|---|------|-----------|
+| 1 | All process steps from the Process Flow Diagram are included in Structure Analysis | ☐ |
+| 2 | Every Work Element maps to at least one Failure Cause in Step 4 | ☐ |
+| 3 | All Functions are defined with Verb + Noun + Measurable Standard | ☐ |
+| 4 | Every Function has a measurable verification method | ☐ |
+| 5 | Failure chain direction is Effect → Mode → Cause for every row | ☐ |
+| 6 | All Failure Causes are evidence-based — no unverified assumptions used as final causes | ☐ |
+| 7 | For post-escape updates: FCs match the validated 8D/CAPA root cause | ☐ |
+| 8 | All Special Characteristics identified and carry S = 9 or S = 10 | ☐ |
+| 9 | S/O/D ratings include data justification (Cpk, historical rate, or engineering rationale) | ☐ |
+| 10 | S/O/D ratings agreed by the cross-functional team and documented | ☐ |
+| 11 | AP table applied correctly — S = 9 or 10 produces H regardless of O and D | ☐ |
+| 12 | Every H-AP item has a named owner and target date | ☐ |
+| 13 | No H-AP item is closed with detection improvement only (without written justification) | ☐ |
+| 14 | All actions implemented and verified — revised S/O/D recorded with evidence | ☐ |
+| 15 | No H-AP item is overdue without documented escalation to management | ☐ |
+| 16 | Detection controls in PFMEA match corresponding entries in the Control Plan | ☐ |
+| 17 | Prevention controls in PFMEA reflected in Work Instructions (current revision) | ☐ |
+| 18 | PFMEA review triggered by one of: quality escape, process change, or annual review | ☐ |
