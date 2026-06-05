@@ -184,8 +184,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the skill format and submission proce
 
 ## Authors
 
-**[Ricardo Braga](https://github.com/RBraga01)** — 15 years automotive supplier quality engineering, claims management specialist (~30 electronic component suppliers), 8D and FMEA practitioner.
+**[@RBraga01](https://github.com/RBraga01)** — Automotive Supplier Quality Engineer with 15+ years of experience in electronic components and supplier claims management (~30 suppliers). Focused on scalable, system-driven quality engineering, combining 8D, 5-Why root cause analysis, and FMEA to build robust, audit-ready processes and reusable quality frameworks.
 
-**[Miguel Machado](https://github.com/migmcc)** — 25+ years quality engineering experience, co-founder [iPS](https://github.com/RBraga01/iPS).
+**[@migmcc](https://github.com/migmcc)** — 25+ years quality engineering experience, co-founder [iPS](https://github.com/RBraga01/iPS).
 
 Part of the [iPS](https://github.com/RBraga01/iPS) quality management ecosystem.
