@@ -13,10 +13,11 @@
 2. [Adding a new agent](#2-adding-a-new-agent)
 3. [Adding a reference file or asset](#3-adding-a-reference-file-or-asset)
 4. [Correcting or updating an existing skill or agent](#4-correcting-or-updating-an-existing-skill-or-agent)
-5. [Adding a new platform connector](#5-adding-a-new-platform-connector)
-6. [Version bump inside a SKILL.md](#6-version-bump-inside-a-skillmd)
-7. [New release — batch update](#7-new-release--batch-update)
-8. [Before you commit](#8-before-you-commit)
+5. [Updating a skill or agent (platform knowledge sync)](#5-updating-a-skill-or-agent-platform-knowledge-sync)
+6. [Adding a new platform connector](#6-adding-a-new-platform-connector)
+7. [Version bump inside a SKILL.md](#7-version-bump-inside-a-skillmd)
+8. [New release — batch update](#8-new-release--batch-update)
+9. [Before you commit](#9-before-you-commit)
 
 ---
 
@@ -115,7 +116,22 @@ Triggered when content is changed in an existing `SKILL.md` file (either directl
 
 ---
 
-## 5. Adding a new platform connector
+## 5. Updating a skill or agent (platform knowledge sync)
+
+Triggered when any SKILL.md content changes (correction, version bump, new section).
+
+| # | File | What to change | Example |
+|---|------|----------------|---------|
+| 1 | `platforms/chatgpt/knowledge/<skill-name>.md` | Copy the updated SKILL.md verbatim over the knowledge file | `Copy-Item skills/planning/ppap/SKILL.md platforms/chatgpt/knowledge/ppap.md` |
+| 2 | `platforms/claude-ai/knowledge/<skill-name>.md` | Same — copy to claude-ai knowledge directory | `Copy-Item skills/planning/ppap/SKILL.md platforms/claude-ai/knowledge/ppap.md` |
+
+**Why this matters:** The ChatGPT GPT and Claude.ai Project load skills from these knowledge bundles. If the canonical SKILL.md is updated but the knowledge files are not, the platforms silently serve stale content.
+
+**Rule:** Every SKILL.md change that goes into a commit **must** have a corresponding knowledge file update staged in the same commit.
+
+---
+
+## 6. Adding a new platform connector
 
 Triggered when a new folder is created in `platforms/` (e.g., `platforms/new-platform/`).
 
@@ -130,7 +146,7 @@ Triggered when a new folder is created in `platforms/` (e.g., `platforms/new-pla
 
 ---
 
-## 6. Version bump inside a SKILL.md
+## 7. Version bump inside a SKILL.md
 
 Triggered when only the `version` field in a `SKILL.md` frontmatter is changed (no content change).
 
@@ -145,7 +161,7 @@ Triggered when only the `version` field in a `SKILL.md` frontmatter is changed (
 
 ---
 
-## 7. New release — batch update
+## 8. New release — batch update
 
 Triggered when multiple changes are grouped into a versioned release (e.g., v2.0.0, v2.1.0).
 
@@ -173,10 +189,12 @@ Triggered when multiple changes are grouped into a versioned release (e.g., v2.0
 | 20 | `E:\quality-engineering-skills.md` | Skill inventory: add all new skills | One entry per skill with status |
 | 21 | `E:\quality-engineering-skills.md` | Build status / current status notes | Reflect the new version |
 | 22 | All new and modified `SKILL.md` files | Frontmatter: `version`, `last_updated`, `updated_by`, `reviewed_by` | Accurate per file |
+| 23 | `platforms/chatgpt/knowledge/` | Copy every new or updated SKILL.md verbatim | See §5 for the command pattern |
+| 24 | `platforms/claude-ai/knowledge/` | Same — keep in sync with chatgpt/knowledge | Directories must always be identical |
 
 ---
 
-## 8. Before you commit
+## 9. Before you commit
 
 Run through this checklist before every `git commit` to master.
 

@@ -176,6 +176,7 @@ description: >-
 - [ ] `## Changelog` section included at the end of the file (see format below)
 - [ ] If a `references/` or `assets/` file is linked in SKILL.md, the file exists on disk and has frontmatter
 - [ ] Tested with at least one AI agent before submitting
+- [ ] Tested with `/skill-auditor` — score must be **≥ 9/10** before the PR will be accepted
 
 **Changelog format** (required at end of every SKILL.md):
 

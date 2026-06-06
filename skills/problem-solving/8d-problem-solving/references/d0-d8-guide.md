@@ -220,7 +220,7 @@ Stop the non-conforming product from reaching the customer while D4–D5 are in 
 | Stellantis | 8D (MAQMSR) | Recommended | SQS Portal |
 | GM | Global 8D | Recommended | Covisint |
 
-See [oem-formats](../../documentation/8d-report-writing/references/oem-formats.md) for full detail.
+See [oem-formats](../../../documentation/8d-report-writing/references/oem-formats.md) for full detail.
 
 ---
 
