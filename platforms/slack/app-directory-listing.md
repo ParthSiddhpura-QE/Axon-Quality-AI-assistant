@@ -1,4 +1,4 @@
-# Slack App Directory — Submission Guide
+﻿# Slack App Directory — Submission Guide
 
 This guide takes you from a deployed Cloudflare Worker to a public listing in the Slack App Directory.
 
@@ -175,7 +175,7 @@ Powered by Quality-Engineering-Skills — the open-source canonical quality engi
 
 **App website:** https://github.com/RBraga01/Quality-Engineering-Skills
 
-**Support email:** enter_on_junior@hotmail.com
+**Support email:** qessupport@gmail.com
 
 **Privacy policy:** https://rbraga01.github.io/Quality-Engineering-Skills/privacy
 

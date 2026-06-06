@@ -1,4 +1,4 @@
-# Google Workspace Marketplace — Submission Guide
+﻿# Google Workspace Marketplace — Submission Guide
 
 This guide takes you from a deployed Apps Script add-on to a public listing in the Google Workspace Marketplace.
 
@@ -102,7 +102,7 @@ In [console.cloud.google.com](https://console.cloud.google.com) for your project
 | Short description | 8D coaching, FMEA review, NCR writing, root cause analysis, and ISO 9001 / IATF 16949 audit — for quality engineers. |
 | Developer name | Quality-Engineering-Skills |
 | Developer website | https://github.com/RBraga01/Quality-Engineering-Skills |
-| Developer email | enter_on_junior@hotmail.com |
+| Developer email | qessupport@gmail.com |
 | Support URL | https://github.com/RBraga01/Quality-Engineering-Skills/issues |
 | Privacy policy URL | https://rbraga01.github.io/Quality-Engineering-Skills/privacy |
 | Terms of service URL | https://github.com/RBraga01/Quality-Engineering-Skills/blob/master/LICENSE |

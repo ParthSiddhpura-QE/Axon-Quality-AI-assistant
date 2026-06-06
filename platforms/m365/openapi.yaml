@@ -1,4 +1,4 @@
-openapi: "3.0.3"
+﻿openapi: "3.0.3"
 info:
   title: Quality Engineering Skills API
   description: >
@@ -7,7 +7,7 @@ info:
     Powered by Quality-Engineering-Skills (github.com/RBraga01/Quality-Engineering-Skills).
   version: "1.0.0"
   contact:
-    email: enter_on_junior@hotmail.com
+    email: qessupport@gmail.com
   license:
     name: MIT
     url: https://github.com/RBraga01/Quality-Engineering-Skills/blob/master/LICENSE
