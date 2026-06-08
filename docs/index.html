@@ -431,6 +431,9 @@ hr.sep { border:none; border-top:1px solid var(--border); transition:border-colo
   display:flex; align-items:center; justify-content:center;
   margin:0 auto 14px; position:relative; z-index:1;
 }
+.plat-logo img {
+  width:34px; height:34px; object-fit:contain; display:block;
+}
 .platform-card h3  { font-size:.9rem; font-weight:700; color:var(--text-strong); margin-bottom:5px; position:relative; z-index:1; transition:color .25s; }
 .platform-card p   { font-size:.73rem; color:var(--muted); line-height:1.5; position:relative; z-index:1; }
 .plat-badge {
@@ -1050,9 +1053,7 @@ footer p { font-size:.78rem; color:var(--muted); }
 
     <div class="platform-card plat-chatgpt reveal">
       <div class="plat-logo">
-        <svg width="34" height="34" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M37.532 16.87a9.963 9.963 0 0 0-.856-8.184 10.078 10.078 0 0 0-10.855-4.835 9.964 9.964 0 0 0-7.504-3.366 10.079 10.079 0 0 0-9.612 6.977 9.967 9.967 0 0 0-6.664 4.834 10.08 10.08 0 0 0 1.24 11.817 9.965 9.965 0 0 0 .856 8.185 10.079 10.079 0 0 0 10.855 4.835 9.965 9.965 0 0 0 7.504 3.366 10.08 10.08 0 0 0 9.617-6.981 9.967 9.967 0 0 0 6.663-4.834 10.079 10.079 0 0 0-1.243-11.813z" fill="#10a37f"/>
-        </svg>
+        <img src="https://cdn.simpleicons.org/openai/10a37f" width="34" height="34" alt="OpenAI">
       </div>
       <h3>ChatGPT Custom GPT</h3>
       <p>Live now in the GPT Store. No setup. Click and start your 8D, NCR, or audit.</p>
@@ -1061,9 +1062,7 @@ footer p { font-size:.78rem; color:var(--muted); }
 
     <div class="platform-card plat-claude reveal">
       <div class="plat-logo">
-        <svg width="34" height="34" viewBox="0 0 46 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M26.042 0h-6.084L7.625 33.999h6.417l2.834-7.776h11.249l2.833 7.776H37.375L26.042 0zm-7.498 20.624 3.456-9.498 3.457 9.498h-6.913z" fill="#CC785C"/>
-        </svg>
+        <img src="https://cdn.simpleicons.org/anthropic/CC785C" width="34" height="34" alt="Anthropic">
       </div>
       <h3>Claude.ai Project</h3>
       <p>Private project with full knowledge files. Setup guide available — takes under 10 minutes.</p>
@@ -1072,11 +1071,7 @@ footer p { font-size:.78rem; color:var(--muted); }
 
     <div class="platform-card plat-cli reveal">
       <div class="plat-logo">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="3" width="20" height="18" rx="3" fill="rgba(139,92,246,.15)" stroke="#8b5cf6" stroke-width="1.5"/>
-          <path d="M7 9l3 3-3 3" stroke="#8b5cf6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M13 15h4" stroke="#8b5cf6" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
+        <img src="https://cdn.simpleicons.org/anthropic/8b5cf6" width="34" height="34" alt="Anthropic / Claude Code">
       </div>
       <h3>Claude Code / CLI</h3>
       <p>Native skill integration. One install command, skills available in your terminal immediately.</p>
@@ -1085,11 +1080,7 @@ footer p { font-size:.78rem; color:var(--muted); }
 
     <div class="platform-card plat-teams reveal">
       <div class="plat-logo">
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20.625 6.75h-3.75v8.25c0 2.07-1.68 3.75-3.75 3.75H9.375A3.375 3.375 0 0 0 12.75 21h7.875A2.625 2.625 0 0 0 23.25 18.375V9.375A2.625 2.625 0 0 0 20.625 6.75z" fill="#5059C9"/>
-          <path d="M13.125 3H5.625A2.625 2.625 0 0 0 3 5.625v7.5A2.625 2.625 0 0 0 5.625 15.75h7.5A2.625 2.625 0 0 0 15.75 13.125v-7.5A2.625 2.625 0 0 0 13.125 3z" fill="#7B83EB"/>
-          <path d="M9.375 10.5a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5z" fill="white"/>
-        </svg>
+        <img src="https://cdn.simpleicons.org/microsoftteams/6264A7" width="34" height="34" alt="Microsoft Teams">
       </div>
       <h3>Microsoft Teams</h3>
       <p>Copilot Studio connector built. Deploy to your tenant in under 30 minutes.</p>
@@ -1098,11 +1089,7 @@ footer p { font-size:.78rem; color:var(--muted); }
 
     <div class="platform-card plat-gemini reveal">
       <div class="plat-logo">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="#4285F4" opacity=".15"/>
-          <path d="M12 2v20c2.76-2.5 4-5.5 4-10s-1.24-7.5-4-10z" fill="#4285F4"/>
-          <path d="M12 2v20c-2.76-2.5-4-5.5-4-10s1.24-7.5 4-10z" fill="#34A853"/>
-        </svg>
+        <img src="https://cdn.simpleicons.org/googlegemini/4285F4" width="34" height="34" alt="Google Gemini">
       </div>
       <h3>Gemini / Google</h3>
       <p>Google Apps Script add-on. Works with Gemini for Workspace and Gemini CLI.</p>
@@ -1111,9 +1098,7 @@ footer p { font-size:.78rem; color:var(--muted); }
 
     <div class="platform-card plat-slack reveal">
       <div class="plat-logo">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zm10.122 2.521a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zm-2.523 10.122a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zm0-1.268a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z" fill="#E01E5A"/>
-        </svg>
+        <img src="https://cdn.simpleicons.org/slack/E01E5A" width="34" height="34" alt="Slack">
       </div>
       <h3>Slack</h3>
       <p>Cloudflare Worker integration. Slash commands for /8d-coach, /ppap-checker, and more.</p>
