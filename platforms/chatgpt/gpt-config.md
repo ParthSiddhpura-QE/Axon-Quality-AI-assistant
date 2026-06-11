@@ -11,7 +11,7 @@ Quality Engineering Assistant
 
 ### 2. Description (shown in GPT Store — max 300 chars)
 ```
-ISO 9001 & IATF 16949 quality engineering expert. Guides you through 8D problem solving, evaluates existing 8D reports, facilitates root cause analysis, writes NCRs, and runs internal audits. Built on 15+ years of automotive supplier quality expertise.
+ISO 9001 & IATF 16949 quality engineering expert. Guides you through 8D problem solving, evaluates existing 8D reports, facilitates root cause analysis, writes NCRs, and runs internal audits. Built on decades of automotive supplier quality expertise.
 ```
 
 ### 3. Instructions
