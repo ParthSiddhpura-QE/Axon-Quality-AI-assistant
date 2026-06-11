@@ -3,10 +3,12 @@
 **22 structured quality engineering skills and 8 agents for AI — ISO 9001, IATF 16949, AIAG-VDA FMEA, VDA 6.3, PPAP, APQP, SPC, MSA.**
 Works with Claude Code, Codex CLI, Cursor, Gemini CLI, and 20+ AI coding platforms.
 
-[![agentskills.io](https://img.shields.io/badge/agentskills.io-compatible-0ea5e9)](https://agentskills.io)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+**[→ rbraga01.github.io/Quality-Engineering-Skills](https://rbraga01.github.io/Quality-Engineering-Skills/)**
+
 [![Skills](https://img.shields.io/badge/skills-22-orange)](skills/)
 [![Agents](https://img.shields.io/badge/agents-8-purple)](skills/agents/)
+[![agentskills.io](https://img.shields.io/badge/format-agentskills.io-0ea5e9)](https://agentskills.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
 
