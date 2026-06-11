@@ -31,7 +31,6 @@ For significant structural changes (new domains, platform connector changes, rel
 
 - `skills/` SKILL.md files are the canonical source for all methodology content
 - Platform connectors in `platforms/` adapt FROM the SKILL.md files — never the other way around
-- The master plan is at `E:\quality-engineering-skills.md` (local to lead, not in repo)
 
 ## Commit message format
 

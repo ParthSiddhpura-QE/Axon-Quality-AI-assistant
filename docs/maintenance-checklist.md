@@ -28,7 +28,6 @@
 | `README.md` | Badge counts (skills-N, agents-N), skill index tables, agents section, coverage table, roadmap line |
 | `CHANGELOG.md` | Version history entries |
 | `STATUS.md` | Metrics table, per-skill table rows with 🟡/🟢 flags, agents table rows, Pending section |
-| `E:\quality-engineering-skills.md` | Master plan (outside git) — skill inventory, build status, current status notes |
 | `docs/index.html` | Landing page — skill count, agent count, domain sections, agent cards |
 | `SKILL.md` (the file itself) | `last_updated`, `updated_by`, `reviewed_by`, `version` frontmatter fields; internal changelog section |
 
@@ -50,7 +49,6 @@ Triggered when a new `SKILL.md` is created in `skills/<domain>/<skill-name>/`.
 | 8 | `STATUS.md` | Skills table: add a new row in the correct domain section with the skill name, domain, paired agent, primary reference, Output Format ✅/pending, and 🟡/🟢/🔴 flag | See existing rows for format |
 | 9 | `docs/index.html` | Skill count in the hero/stats section | `22 skills` → `23 skills` |
 | 10 | `docs/index.html` | Domain section: add a card or row for the new skill | Add inside the correct domain block |
-| 11 | `E:\quality-engineering-skills.md` | Skill inventory list: add the skill name and status | Add line under the relevant domain |
 | 12 | New `SKILL.md` itself | Fill frontmatter: `version`, `last_updated`, `updated_by`, `reviewed_by` | `version: "1.0"`, `last_updated: "2026-06-06"` |
 
 **Flag rule for STATUS.md:**
@@ -75,7 +73,6 @@ Triggered when a new `SKILL.md` is created in `skills/agents/<agent-name>/`.
 | 7 | `STATUS.md` | Agents table: add a new row with agent name, skills served, Output Format ✅/pending, and 🟡/🟢 flag | See existing rows for format |
 | 8 | `docs/index.html` | Agent count in the hero/stats section | `8 agents` → `9 agents` |
 | 9 | `docs/index.html` | Agent cards/section: add a card for the new agent | Add inside the agents block |
-| 10 | `E:\quality-engineering-skills.md` | Build status / current status notes | Note the new agent |
 | 11 | New `SKILL.md` itself | Fill frontmatter: `version`, `last_updated`, `updated_by`, `reviewed_by` | `version: "1.0"`, `last_updated: "2026-06-06"` |
 
 ---
@@ -92,7 +89,6 @@ Triggered when a new file is added to `skills/<domain>/<skill-name>/references/`
 | 4 | `STATUS.md` | Skills table row for the parent skill: change 🟡 flag to 🟢 if Output Format was already present | `🟡` → `🟢` |
 | 5 | `CHANGELOG.md` | Add entry under `### Added` — reference files sub-table | `\| \`skill-name/references/filename.md\` \| Brief purpose \|` |
 | 6 | Parent `SKILL.md` | Update `last_updated` frontmatter field | `"2026-06-04"` → `"2026-06-06"` |
-| 7 | `E:\quality-engineering-skills.md` | Build status notes if the reference file completes a skill | Note completion |
 
 **Note:** `README.md`, `docs/index.html`, and badge counts do NOT need updating for reference file additions alone.
 
@@ -140,7 +136,6 @@ Triggered when a new folder is created in `platforms/` (e.g., `platforms/new-pla
 | 1 | `CHANGELOG.md` | Add entry under `### Added` — platform connectors sub-table | `\| Platform Name \| platforms/new-platform/ — brief description \|` |
 | 2 | `README.md` | Install / compatibility section (if one exists listing supported platforms): add the platform | Add to the "Works with" list |
 | 3 | `README.md` | Header description line (if it enumerates platforms): update the count or list | `20+ AI coding platforms` (may not need changing if phrasing is general) |
-| 4 | `E:\quality-engineering-skills.md` | Build status / platform notes | Note the new connector |
 
 **Note:** Platform connectors are independent. `STATUS.md` metrics and `docs/index.html` skill/agent counts do NOT change for platform additions.
 
@@ -186,8 +181,6 @@ Triggered when multiple changes are grouped into a versioned release (e.g., v2.0
 | 17 | `docs/index.html` | Agent count in stats section | `8 agents` → `10 agents` |
 | 18 | `docs/index.html` | Domain sections: add cards for new skills | One card per new skill |
 | 19 | `docs/index.html` | Agent section: add cards for new agents | One card per new agent |
-| 20 | `E:\quality-engineering-skills.md` | Skill inventory: add all new skills | One entry per skill with status |
-| 21 | `E:\quality-engineering-skills.md` | Build status / current status notes | Reflect the new version |
 | 22 | All new and modified `SKILL.md` files | Frontmatter: `version`, `last_updated`, `updated_by`, `reviewed_by` | Accurate per file |
 | 23 | `platforms/chatgpt/knowledge/` | Copy every new or updated SKILL.md verbatim | See §5 for the command pattern |
 | 24 | `platforms/claude-ai/knowledge/` | Same — keep in sync with chatgpt/knowledge | Directories must always be identical |
@@ -205,7 +198,6 @@ Run through this checklist before every `git commit` to master.
 | 3 | Every new `SKILL.md` has `last_updated`, `updated_by`, `version` filled | Open each new file and check frontmatter |
 | 4 | `CHANGELOG.md` has an entry for every file added or changed | Diff against previous commit; confirm each change has a CHANGELOG line |
 | 5 | `STATUS.md` 🟡/🟢/🔴 flags are correct for every modified skill | For each touched skill: 🟢 = Output Format ✅ + reference file present; 🟡 = Output Format only; 🔴 = neither |
-| 6 | `E:\quality-engineering-skills.md` reflects the current state | Open and verify skill inventory and build status notes match what was committed |
 
 ---
 

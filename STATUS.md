@@ -109,12 +109,13 @@ _Last updated: 2026-06-06. Auto-updated each release._
 
 All 22 skills now have at least one reference file (commit e3af81a, 2026-06-06). No pending items.
 
-### Week 5 — Phase 0 pre-launch in progress
+### Launch — 2026-06-11
 
-- [ ] CHANGELOG v2.0.0 entry — ✅ done (commit e0878e5)
-- [ ] Landing page v2.0 dark/light mode — ✅ done (commit 8d631cb)
-- [ ] Maintenance checklist — ✅ done (commit 39458c8)
+- [x] CHANGELOG v2.0.0 entry (commit e0878e5)
+- [x] Landing page v2.0 dark/light mode (commit 8d631cb)
+- [x] Maintenance checklist (commit 39458c8)
+- [x] Repo PUBLIC (2026-06-11)
+- [x] migmcc elevated to co-creator — direct push to master, full authority
 - [ ] Platform activation (ChatGPT, Slack, Gemini, Teams, Claude.ai)
 - [ ] Demos / GIFs for README
 - [ ] agentskills.io registry submission
-- [ ] Repo goes PUBLIC (Phase 3 gate — lead decision only)

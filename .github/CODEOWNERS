@@ -1,10 +1,2 @@
-# All changes require review from the lead
-* @RBraga01
-
-# Structural paths — always require lead approval even if * already covers it
-/platforms/ @RBraga01
-/skills/agents/ @RBraga01
-/README.md @RBraga01
-/CONTRIBUTING.md @RBraga01
-/CLAUDE.md @RBraga01
-/LICENSE @RBraga01
+# Both creators are owners — either can review and merge
+* @RBraga01 @migmcc
