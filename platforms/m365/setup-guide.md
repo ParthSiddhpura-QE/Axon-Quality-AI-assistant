@@ -1,12 +1,27 @@
-# Microsoft 365 AppSource / Copilot Plugin Setup Guide
+# Microsoft 365 Copilot Setup Guide
 
-This guide covers three deployment tracks for the Quality Engineering Assistant as an M365 Copilot extension:
+> **⭐ Recommended path: the declarative agent in [`declarative-agent/`](declarative-agent/).**
+> No backend, no API keys, no code — the agent runs on the user's own M365 Copilot license,
+> exactly like the ChatGPT custom GPT and the Claude.ai project instructions.
+> See [declarative-agent/README.md](declarative-agent/README.md) for sideload, org-wide
+> deployment, and AppSource publication.
+
+---
+
+## Advanced alternative — self-hosted API plugin
+
+The tracks below describe a **different architecture**: an API plugin backed by your own
+Cloudflare Worker calling the Anthropic API **at your cost**. Use this only if you need
+server-side control over the model and prompts. Most users should use the declarative agent above.
 
 - **Track 0 — Deploy the API (required first):** Deploy the Cloudflare Worker that powers the plugin.
 - **Track A — Sideload (internal testing):** Deploy directly to your M365 tenant for testing without AppSource submission.
 - **Track B — AppSource publication:** Publish to the Microsoft 365 AppSource marketplace once the API is live.
 
----
+> **⚠️ Security note:** the sample `worker.js` has no authentication — anyone who discovers
+> the URL can call it and consume your Anthropic API budget. Before any production use, add
+> a bearer-token check in the worker, declare `securitySchemes` in `openapi.yaml`, restrict
+> CORS, and configure Cloudflare rate limiting.
 
 ---
 
