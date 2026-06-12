@@ -26,9 +26,10 @@
     "vda-6-3",
     "manufacturing"
   ],
-  "skills": "../skills/",
+  "skills": "./skills/",
   "interface": {
-    "composerIcon": "../docs/assets/qes-logo.jpg",
+    "composerIcon": "./docs/assets/qes-logo.jpg",
+    "logo": "./docs/assets/qes-logo.jpg",
     "displayName": "Quality Engineering Skills",
     "shortDescription": "22 quality engineering skills — ISO 9001, IATF 16949, FMEA, PPAP, 8D.",
     "longDescription": "Quality Engineering Skills packages decades of hands-on quality engineering expertise into structured skills your AI agent can load and apply immediately. Covers problem solving (8D, 5-Why, Fishbone, DMAIC), risk analysis (PFMEA, DFMEA, Action Priority), planning (PPAP, APQP, Control Plan), measurement (MSA, SPC), documentation (NCR, CAR, 8D Report), auditing (ISO 9001, IATF 16949, VDA 6.3), and supplier quality. Every skill maps to specific standard clauses. Validated methodology, not just format.",
@@ -47,6 +48,6 @@
     "privacyPolicyURL": "https://github.com/RBraga01/Quality-Engineering-Skills/blob/master/SECURITY.md",
     "termsOfServiceURL": "https://github.com/RBraga01/Quality-Engineering-Skills/blob/master/LICENSE",
     "brandColor": "#ea580c",
-    "screenshots": []
+    "screenshots": ["./docs/assets/qes-logo.jpg"]
   }
 }

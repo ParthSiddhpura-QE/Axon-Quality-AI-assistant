@@ -21,7 +21,7 @@ Best for: teams that want the bot running today without a development environmen
    - Click **Create**.
 
 2. **Get your credentials:**
-   - Go to **OAuth & Permissions** → install the app to your workspace → copy the **Bot User OAuth Token** (`xoxb-...`).
+   - Go to **OAuth & Permissions** → install the app to your workspace → copy the **Bot User OAuth Token** (starts with `xoxb-`).
    - Go to **Basic Information** → copy the **Signing Secret**.
 
 3. **Create an n8n workflow:**
@@ -73,10 +73,10 @@ npm install @slack/bolt @anthropic-ai/sdk dotenv
 
 Create a `.env` file:
 ```
-SLACK_BOT_TOKEN=xoxb-your-bot-token
-SLACK_SIGNING_SECRET=your-signing-secret
-SLACK_APP_TOKEN=xapp-your-app-token  # Required for Socket Mode
-ANTHROPIC_API_KEY=your-anthropic-key
+SLACK_BOT_TOKEN=your-bot-token-here
+SLACK_SIGNING_SECRET=your-signing-secret-here
+SLACK_APP_TOKEN=your-app-token-here  # Required for Socket Mode
+ANTHROPIC_API_KEY=your-anthropic-key-here
 PORT=3000
 ```
 
