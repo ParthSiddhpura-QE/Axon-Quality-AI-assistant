@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="assets/qes-logo.jpg" alt="Quality Engineering Skills" width="160">
+  <img src="assets/qes-logo.jpg" alt="Axon Quality AI Assistant" width="160">
 </p>
 
 # Quality-Engineering-Skills
 
-**22 structured quality engineering skills and 8 agents for AI — ISO 9001, IATF 16949, AIAG-VDA FMEA, VDA 6.3, PPAP, APQP, SPC, MSA.**
+**22 structured Axon Quality AI Assistant and 8 agents for AI — ISO 9001, IATF 16949, AIAG-VDA FMEA, VDA 6.3, PPAP, APQP, SPC, MSA.**
 Works with Claude Code, Codex CLI, Cursor, Gemini CLI, and any agentskills.io-compatible AI tool.
 
 **[→ rbraga01.github.io/Quality-Engineering-Skills](https://rbraga01.github.io/Quality-Engineering-Skills/)**
@@ -19,16 +19,16 @@ Works with Claude Code, Codex CLI, Cursor, Gemini CLI, and any agentskills.io-co
 ## Install in 30 seconds
 
 ```bash
-npx skills add RBraga01/Quality-Engineering-Skills
+npx skills add Axon Quality Team
 ```
 
 Or clone directly:
 
 ```bash
-git clone https://github.com/RBraga01/Quality-Engineering-Skills.git
+git clone https://github.com/Axon Quality Team.git
 ```
 
-Or [download as ZIP](https://github.com/RBraga01/Quality-Engineering-Skills/archive/refs/heads/master.zip).
+Or [download as ZIP](https://github.com/Axon Quality Team/archive/refs/heads/master.zip).
 
 ---
 
@@ -234,9 +234,3 @@ Quality engineering is global. If you have domain expertise to add:
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the skill format and submission process.
 
 ---
-
-## Authors
-
-**[@RBraga01](https://github.com/RBraga01)** — 15+ years in quality engineering. Claim manager for ~30 electronic component suppliers — receives OEM customer complaints and manages the full escalation to the respective suppliers. Created Quality Engineering Skills to bring structured methodology to AI agents in the quality domain.
-
-**[@migmcc](https://github.com/migmcc)** — 25+ years in quality engineering. Claim manager handling OEM customer complaints and escalations across electromechanical and mechanical suppliers. 8D and problem-solving expert. Responsible for the skill content that makes the methodology accurate and practitioner-grade.
